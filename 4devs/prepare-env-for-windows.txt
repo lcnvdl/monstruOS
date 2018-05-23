@@ -1,12 +1,36 @@
 choco install -y mingw qemu git wget nasm
 copy /y C:\tools\mingw64\bin\mingw32-make.exe C:\tools\mingw64\bin\make.exe
-cd %TEMP%
-mkdir monstruos
-cd monstruos
-wget https://github.com/lordmilko/i686-elf-tools/releases/download/7.1.0/i686-elf-tools-windows.zip
-mkdir %USERPROFILE%\monstruos
-mkdir %USERPROFILE%\monstruos\tools
-mkdir %USERPROFILE%\monstruos\tools\i686-elf-tools
-7z x i686-elf-tools-windows.zip -O%USERPROFILE%\monstruos\tools\i686-elf-tools
-del /f /q i686-elf-tools-windows.zi
+
+rem ------------------------------------------
+rem CARPETAS
+rem ------------------------------------------
+
+mkdir %TEMP%\monstruos
+mkdir %USERPROFILE%\.monstruos
+mkdir %USERPROFILE%\.monstruos\tools
+
+rem ------------------------------------------
+rem BINUTILS
+rem ------------------------------------------
+
+cd %TEMP%\monstruos
+wget https://github.com/lcnvdl/i386-elf-toolchain/releases/download/0.1/i386-elf-binutils-windows-x86_64.zip
+mkdir %USERPROFILE%\.monstruos\tools\i386-elf-binutils
+7z x i386-elf-binutils-windows-x86_64.zip -O%USERPROFILE%\.monstruos\tools\
+del /f /q i386-elf-binutils-windows-x86_64.zip
+
+rem ------------------------------------------
+rem GCC
+rem ------------------------------------------
+
+cd %TEMP%\monstruos
+wget https://github.com/lcnvdl/i386-elf-toolchain/releases/download/0.1/i386-elf-gcc-windows-x86_64.zip
+mkdir %USERPROFILE%\.monstruos\tools\i386-elf-gcc
+7z x i386-elf-gcc-windows-x86_64.zip -O%USERPROFILE%\.monstruos\tools\
+del /f /q i386-elf-gcc-windows-x86_64.zip
+
+rem ------------------------------------------
+rem FIN
+rem ------------------------------------------
+
 exit
