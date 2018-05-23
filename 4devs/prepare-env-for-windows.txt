@@ -1,0 +1,11 @@
+choco install -y mingw qemu git wget
+cd %TEMP%
+mkdir monstruos
+cd monstruos
+wget https://github.com/lordmilko/i686-elf-tools/releases/download/7.1.0/i686-elf-tools-windows.zip
+mkdir %USERPROFILE%\monstruos
+mkdir %USERPROFILE%\monstruos\tools
+mkdir %USERPROFILE%\monstruos\tools\i686-elf-tools
+7z x i686-elf-tools-windows.zip -O%USERPROFILE%\monstruos\tools\i686-elf-tools
+del /f /q i686-elf-tools-windows.zi
+exit
