@@ -1,9 +1,0 @@
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\bin\Debug\netcoreapp2.0\monstruOs.Kernel.deps.json
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\bin\Debug\netcoreapp2.0\monstruOs.Kernel.dll
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\bin\Debug\netcoreapp2.0\monstruOs.Kernel.pdb
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\obj\Debug\netcoreapp2.0\monstruOs.Kernel.csprojAssemblyReference.cache
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\obj\Debug\netcoreapp2.0\monstruOs.Kernel.csproj.CoreCompileInputs.cache
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\obj\Debug\netcoreapp2.0\monstruOs.Kernel.AssemblyInfoInputs.cache
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\obj\Debug\netcoreapp2.0\monstruOs.Kernel.AssemblyInfo.cs
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\obj\Debug\netcoreapp2.0\monstruOs.Kernel.dll
-C:\Users\lcnvdl\Documents\GitHub\monstruOS\monstruos-hl\monstruOs\monstruOs.Kernel\obj\Debug\netcoreapp2.0\monstruOs.Kernel.pdb
