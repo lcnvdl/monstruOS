@@ -53,3 +53,5 @@ dkms.conf
 *.suo
 .vs
 .vscode
+*.bin
+*.bin

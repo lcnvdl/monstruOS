@@ -1,4 +1,5 @@
-choco install -y mingw qemu git wget
+choco install -y mingw qemu git wget nasm
+copy /y C:\tools\mingw64\bin\mingw32-make.exe C:\tools\mingw64\bin\make.exe
 cd %TEMP%
 mkdir monstruos
 cd monstruos
