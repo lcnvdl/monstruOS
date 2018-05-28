@@ -9,7 +9,6 @@
 #define IRQ_HANDLER irq_handler
 #endif
 
-#include <stdint.h>
 #include "common.h"
 
 /* ISRs reserved for CPU exceptions */

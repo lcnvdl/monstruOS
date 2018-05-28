@@ -1,4 +1,4 @@
-Bare Bones		https://wiki.osdev.org/index.php?title=Bare_Bones&oldid=22404
-LLVM Cross-Compiler	https://wiki.osdev.org/index.php?title=LLVM_Cross-Compiler&oldid=19899
-C Library		https://wiki.osdev.org/index.php?title=C_Library&oldid=21766
+Bare Bones				https://wiki.osdev.org/index.php?title=Bare_Bones&oldid=22404
+LLVM Cross-Compiler		https://wiki.osdev.org/index.php?title=LLVM_Cross-Compiler&oldid=19899
+C Library				https://wiki.osdev.org/index.php?title=C_Library&oldid=21766
 Creating a C Library	https://wiki.osdev.org/Creating_a_C_Library

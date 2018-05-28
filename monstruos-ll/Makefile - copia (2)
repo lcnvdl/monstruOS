@@ -1,0 +1,77 @@
+C_SOURCES = $(wildcard kernel/*.c drivers/*.c cpu/*.c libc/*.c)
+CPP_SOURCES = $(wildcard kernel/*.cpp drivers/*.cpp cpu/*.cpp oslib/*.cpp)
+HEADERS = $(wildcard kernel/*.h drivers/*.h cpu/*.h libc/*.h)
+# Nice syntax for file extension replacement
+OBJ = ${C_SOURCES:.c=.o cpu/interrupt.o}
+OBJ_CPP = ${CPP_SOURCES:.cpp=.o}
+
+# Change this if your cross-compiler is somewhere else
+#CC = /usr/local/i386elfgcc/bin/i386-elf-gcc
+CC = g++
+#CC = i386-elf-g++
+GDB = gdb
+LD = i386-elf-ld
+CAT = type
+RM = del /S /F
+#RM = rm -rf
+# LD = i386-elf-ld
+#GDB = /usr/local/i386elfgcc/bin/i386-elf-gdb
+# -g: Use debugging symbols in gcc
+WARNING_FLAGS=-Wall -Wextra -pedantic -Wold-style-cast
+LOCAL_INCLUDES=-Iinclude/ -Iinclude-os/
+COMMON_C_FLAGS=$(LOCAL_INCLUDES) -nostdlib -fno-stack-protector -fno-exceptions -funsigned-char -ffreestanding -fomit-frame-pointer -mno-red-zone -mno-3dnow -mno-mmx -fno-asynchronous-unwind-tables
+MAGIC_FLAGS=-m32
+COMMON_CPP_FLAGS=$(COMMON_C_FLAGS) -std=c++11 -fno-rtti $(MAGIC_FLAGS)
+#CFLAGS = -g -ffreestanding -Wall -Wextra -fno-exceptions -m32 -Iinclude -Iinclude-os
+#CFLAGS = -g -ffreestanding -Wall -Wextra -fno-exceptions -m32 -Iinclude -Dfix_asm_fns
+CFLAGS = $(COMMON_CPP_FLAGS)
+#CFLAGS = -m32 -Iinclude -Iinclude-os -fno-use-cxa-atexit -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wno-write-strings -lgcc
+#CFLAGS =  -nostdlib -m32 -Iinclude -Iinclude-os -fno-use-cxa-atexit -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wno-write-strings
+#CFLAGS = -g -ffreestanding -nostdlib -lgcc -nodefaultlibs -m32 -Iinclude -Iinclude-os -fno-use-cxa-atexit -fno-exceptions -Wno-write-strings -fno-leading-underscore
+
+#CFLAGS = -Xlinker -zmuldefs
+
+# First rule is run by default
+#os-image.bin: boot/bootsect.bin kernel.bin
+#	${CAT} $^ > os-image.bin
+
+os-image.bin: boot/bootsect.bin kernel.bin
+	copy /b /y boot\bootsect.bin+kernel.bin os-image.bin
+
+# '--oformat binary' deletes all symbols as a collateral, so we don't need
+# to 'strip' them manually on this case
+kernel.bin: boot/kernel_entry.o ${OBJ} ${OBJ_CPP}
+	${LD} -o $@ -Ttext 0x1000 $^ --oformat binary
+
+# Used for debugging purposes
+kernel.elf: boot/kernel_entry.o ${OBJ} ${OBJ_CPP}
+	${LD} -o $@ -Ttext 0x1000 $^ 
+
+run: os-image.bin
+	qemu-system-i386 -fda os-image.bin
+	
+run2: os-image.bin
+	qemu-system-i386 -drive format=raw,file=os-image.bin
+
+# Open the connection to qemu and load our kernel-object file with symbols
+debug: os-image.bin kernel.elf
+	qemu-system-i386 -s -fda os-image.bin -d guest_errors,int &
+	${GDB} -ex "target remote localhost:1234" -ex "symbol-file kernel.elf"
+
+# Generic rules for wildcards
+# To make an object, always compile from its .c
+%.o: %.c ${HEADERS}
+	${CC} ${CFLAGS} -c $< -o $@
+
+%.o: %.cpp ${HEADERS}
+	${CC} ${CFLAGS} -c $< -o $@
+
+%.o: %.asm
+	nasm $< -f elf -o $@
+
+%.bin: %.asm
+	nasm $< -f bin -o $@
+
+clean:
+	${RM} *.bin *.dis *.o os-image.bin *.elf
+	${RM} kernel/*.o boot/*.bin drivers/*.o boot/*.o cpu/*.o libc/*.o
