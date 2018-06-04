@@ -3,16 +3,17 @@
 #include "kernel.h"
 /*#include "../libc/string.h"
 #include "../libc/mem.h"*/
-#include <stdint.h>
 
 APIDEF void KMAIN() {
-	char *video_memory = (char*)0xb8000;
-    *video_memory = 'X';
+	//char *video_memory = (char*)0xb8000;
+    //*video_memory = 'X';
     //isr_install();
-    irq_install();
+    //irq_install();
 
-    asm("int $2");
-    asm("int $3");
+    //asm("int $2");
+    //asm("int $3");
+
+    while(true);
 
     //asm volatile("hlt");
 	

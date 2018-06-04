@@ -1,3 +1,4 @@
+#include "common.h"
 #include "screen_coord.h"
 #include "screen_coord_helper.h"
 
