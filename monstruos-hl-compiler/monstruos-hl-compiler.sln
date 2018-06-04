@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.ui", "mostruos.hl.compiler.ui\monstruos.hl.compiler.ui.csproj", "{57605167-31C5-4CD8-B9B9-0104FC0FC1D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.ui", "monstruos.hl.compiler.ui\monstruos.hl.compiler.ui.csproj", "{57605167-31C5-4CD8-B9B9-0104FC0FC1D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.exporter", "mostruos.hl.compiler.exporter\monstruos.hl.compiler.exporter.csproj", "{13F8E943-390A-4287-97F7-7700A15A9173}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.exporter", "monstruos.hl.compiler.exporter\monstruos.hl.compiler.exporter.csproj", "{13F8E943-390A-4287-97F7-7700A15A9173}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.importer", "mostruos.hl.compiler.importer\monstruos.hl.compiler.importer.csproj", "{B4C8D622-4AF3-4100-9A47-D08758FA032B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.importer", "monstruos.hl.compiler.importer\monstruos.hl.compiler.importer.csproj", "{B4C8D622-4AF3-4100-9A47-D08758FA032B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "monstruos.hl.compiler.common", "monstruos.hl.compiler.common\monstruos.hl.compiler.common.csproj", "{D96D6E8A-6973-4C09-AFAA-7D23206A1E8E}"
 EndProject
