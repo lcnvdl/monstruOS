@@ -1,24 +1,23 @@
-#include "../cpu/isr.h"
+#include "isr.h"
 //#include "../drivers/screen.h"*/
 #include "kernel.h"
 /*#include "../libc/string.h"
 #include "../libc/mem.h"*/
-#include <stdint.h>
 
 APIDEF void KMAIN() {
-	char *video_memory = (char*)0xb8000;
-    *video_memory = 'X';
-    /*isr_install();
-    irq_install();
+	//char *video_memory = (char*)0xb8000;
+    //*video_memory = 'X';
+    //isr_install();
+    //irq_install();
 
-    asm("int $2");
-    asm("int $3");*/
+    //asm("int $2");
+    //asm("int $3");
+
+    while(true);
+
+    //asm volatile("hlt");
 	
-	while(true);
-
-    /*asm volatile("hlt");*/
-	/*
-    kprint("Type something, it will go through the kernel\n"
+    /*kprint("Type something, it will go through the kernel\n"
         "Type END to halt the CPU or PAGE to request a kmalloc()\n> ");*/
 }
 

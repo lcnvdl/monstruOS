@@ -36,6 +36,11 @@
 *.x86_64
 *.hex
 
+# Dotnet
+.cache
+obj
+bin
+
 # Debug files
 *.dSYM/
 *.su

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\monstruos.hl.compiler.common\monstruos.hl.compiler.common.csproj" />
+  </ItemGroup>
+
+</Project>
