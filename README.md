@@ -26,9 +26,9 @@ Es recomendable comenzar leyendo "proyecto.docx" ubicado en 4devs.
 
 1. Abrir tools\windows-environment.cmd (haciéndo doble click).
 2. Ejecutar el comando correspondiente:
-..* make - Compila
-..* make clean - Limpia
-..* make run - Ejecuta el sistema operativo
+    * make - Compila
+    * make clean - Limpia
+    * make run - Ejecuta el sistema operativo
 
 ### Linux
 
