@@ -1,4 +1,4 @@
-#include "../cpu/isr.h"
+#include "isr.h"
 //#include "../drivers/screen.h"*/
 #include "kernel.h"
 /*#include "../libc/string.h"

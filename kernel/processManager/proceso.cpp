@@ -1,5 +1,5 @@
-#include "common.h"
-#include "process.h"
+#include "comun.h"
+#include "proceso.h"
 
 static int lastProcessID = 0;
 
