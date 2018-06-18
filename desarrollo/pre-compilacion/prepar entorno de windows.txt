@@ -30,16 +30,6 @@ mkdir %USERPROFILE%\.monstruos\tools\i386-elf-gcc
 del /f /q i386-elf-gcc-windows-x86_64.zip
 
 rem ------------------------------------------
-rem GCC - i686
-rem ------------------------------------------
-
-cd %TEMP%\monstruos
-wget https://github.com/lordmilko/i686-elf-tools/releases/download/7.1.0/i686-elf-tools-windows.zip
-mkdir %USERPROFILE%\.monstruos\tools\i686-elf-tools
-7z x i686-elf-tools-windows.zip -O%USERPROFILE%\.monstruos\tools\i686-elf-tools\
-del /f /q i686-elf-tools-windows.zip
-
-rem ------------------------------------------
 rem FIN
 rem ------------------------------------------
 
