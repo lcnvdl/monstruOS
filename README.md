@@ -16,10 +16,10 @@ Es recomendable comenzar leyendo "proyecto.docx" ubicado en desarrollo.
 
 ### Windows
 
-###Linux
+### Linux
 
 
-#### Compilación y ejecución
+## Compilación y ejecución
 
 ### Windows
 
